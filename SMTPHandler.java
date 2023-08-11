@@ -14,6 +14,8 @@ public class SMTPHandler implements Runnable {
             // Implement SMTP protocol handling here
             // You need to parse SMTP commands, read emails from the client, and store them
             // For simplicity, we will just close the connection for now
+            System.out.println("SMTP Thread is running...");
+
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
 
